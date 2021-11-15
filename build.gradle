@@ -38,7 +38,7 @@ apply plugin: 'signing'
 //}
 
 group 'com.github.isyscore'
-version '1.7.0'
+version '1.8.1'
 
 repositories {
     mavenCentral()
@@ -47,7 +47,7 @@ repositories {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    api "com.github.isyscore:common-jvm:1.7.0"
+    api "com.github.isyscore:common-jvm:1.8.1"
     compileOnly files('lib/android.jar')
 }
 
@@ -90,9 +90,9 @@ uploadArchives {
                 authentication(userName: ossrhUsername, password: ossrhPassword)
             }
             pom.project {
-                name "common-jvm"
+                name "common-android"
                 packaging 'jar'
-                description 'iSysCore Common Kotlin Library'
+                description 'iSysCore Common Android Library'
                 url 'https://github.com/isyscore/common-android'
                 scm {
                     connection 'https://github.com/isyscore/common-android'
